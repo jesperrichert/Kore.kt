@@ -23,4 +23,4 @@ jobs:
       - name: Grant execute permission for Gradle
         run: chmod +x gradlew
       - name: Build Kore.kt
-        run: ./gradlew :Kore.kt:publish -DREPOSILITE_USER=${{ secrets.REPOSILITE_USER }} -DREPOSILITE_TOKEN=${{ secrets.REPOSILITE_TOKEN }}
+        run: ./gradlew publish -DREPOSILITE_USER=${{ secrets.REPOSILITE_USER }} -DREPOSILITE_TOKEN=${{ secrets.REPOSILITE_TOKEN }}
