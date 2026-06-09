@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "${{ steps.sanitize.outputs.safe_name }}"
-          path: "Kore.kt/build/dokka"
+          path: "./build/dokka"
 
 
 
@@ -52,4 +52,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           keep_files: true
           publish_dir: ./public
-          full_commit_message: Publish examples
+          full_commit_message: Publish dokka build
