@@ -3,6 +3,8 @@ package zip.jespersen.korekt.database
 import eu.vendeli.rethis.ReThis
 import eu.vendeli.rethis.command.generic.del
 import eu.vendeli.rethis.command.pubsub.subscribe
+import eu.vendeli.rethis.command.string.get
+import eu.vendeli.rethis.command.string.set
 import eu.vendeli.rethis.shared.types.RType
 import eu.vendeli.rethis.types.common.RespVer
 import eu.vendeli.rethis.types.interfaces.MessageEventHandler
