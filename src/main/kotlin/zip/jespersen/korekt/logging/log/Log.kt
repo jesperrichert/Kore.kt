@@ -1,4 +1,4 @@
-package zip.jespersen.korekt.log
+package zip.jespersen.korekt.logging.log
 
 import java.text.SimpleDateFormat
 import java.util.Date

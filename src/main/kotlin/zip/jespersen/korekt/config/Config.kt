@@ -10,6 +10,7 @@ inline fun <T : Any> config(
     return config
 }
 
+@Suppress("UNCHECKED_CAST")
 class Config<C : Any>(
     val file: File, val type: ConfigType? = ConfigType.JSON
 ) {
