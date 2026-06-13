@@ -33,10 +33,6 @@ dependencies {
     api("net.mamoe.yamlkt:yamlkt:0.+")
 }
 
-kotlin {
-    jvmToolchain(25)
-}
-
 tasks {
     java {
         withSourcesJar()
