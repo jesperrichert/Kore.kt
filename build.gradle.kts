@@ -6,7 +6,7 @@ plugins {
     id("org.jetbrains.dokka") version "2.+"
 }
 
-version = "0.1.1"
+version = "0.1.2"
 group = "zip.jespersen"
 
 repositories {
@@ -31,6 +31,10 @@ dependencies {
 
     // yamlkt
     api("net.mamoe.yamlkt:yamlkt:0.+")
+}
+
+kotlin {
+    jvmToolchain(22)
 }
 
 tasks {
