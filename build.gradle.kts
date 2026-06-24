@@ -6,7 +6,7 @@ plugins {
     id("org.jetbrains.dokka") version "2.+"
 }
 
-version = "0.1.3"
+version = "0.1.3.1"
 group = "zip.jespersen"
 
 repositories {
