@@ -1,8 +1,10 @@
 package zip.jespersen.korekt.extension
 
 import zip.jespersen.korekt.logging.log.Log
+import java.io.File
 import java.math.BigInteger
 import java.util.UUID
+import kotlin.io.encoding.Base64
 
 fun String.red(): String {
     return "${Log.RED}${this}${Log.RESET}"
@@ -81,3 +83,17 @@ fun String.formatCase(case: Case): String = CASE_DELIMITER_REGEX.split(this)
 fun String.capitalizeFirstLetter(): String = replaceFirstChar {
     if (it.isLowerCase()) it.titlecase() else it.toString()
 }
+
+fun String.toBase64(): String = encodeToByteArray().toBase64()
+fun String.fromBase64(): String = String(Base64.decode(this))
+
+fun String.md5(): String = encodeToByteArray().md5()
+fun String.sha256(): String = encodeToByteArray().sha256()
+
+fun String.truncate(max: Int, ellipsis: String = "…"): String =
+    if (length <= max) this else take(max) + ellipsis
+
+fun String.isNumeric(): Boolean = all { it.isDigit() }
+
+fun String.toFile(): File = File(this)
+fun String.toFileOrNull(): File? = File(this).takeIf { it.exists() }
